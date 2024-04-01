@@ -44,12 +44,12 @@ body{
     var time = today.getTime();
     
     let ampm = hrs >= 12 ? 'PM' : 'AM';
-    hrs = hrs % 12;
-    hrs = hrs ? hrs : 12;
+    let hours = hrs % 12;
+    hours = hrs ? hrs : 12;
 
-    let formattedTime = hrs + ':' + minutes.substr(-2) + ':' + seconds.substr(-2) + ' ' + ampm;
+    let formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2) + ' ' + ampm;
 
 
-    document.getElementById('lbl').innerHTML = `<div id="date"> Today is ${date}</div><div>${formattedTime}</div>`;
+    document.getElementById('lbl').innerHTML = `<div id="lbl"> Today is ${date}</div><div id="date">${formattedTime}</div>`;
 </script> 
 </html>
