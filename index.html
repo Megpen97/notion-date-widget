@@ -41,15 +41,7 @@ body{
     var hrs = today.getHours();
     var dayOfWeek = weekday[today.getDay()];
     var date =  dayOfWeek+" " + "/" + (today.getMonth()+1) + today.getDate() + '/'+today.getFullYear()  ;
-    var time = today.getTime();
-    
-    let ampm = hrs >= 12 ? 'PM' : 'AM';
-    let hours = hrs % 12;
-    hours = hrs ? hrs : 12;
 
-    let formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2) + ' ' + ampm;
-
-
-    document.getElementById('lbl').innerHTML = `<div id="lbl"> Today is ${date}</div><div id="date">${formattedTime}</div>`;
+    document.getElementById('lbl').innerHTML = `<div id="lbl"> Today is ${date}</div>`;
 </script> 
 </html>
